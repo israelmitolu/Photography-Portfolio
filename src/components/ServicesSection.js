@@ -7,12 +7,7 @@ import teamwork from "../img/teamwork.svg";
 import Home2 from "../img/home2.png";
 
 //Styles
-import {
-  StyledAbout,
-  StyledDescription,
-  StyledHide,
-  StyledImage,
-} from "../style";
+import { StyledAbout, StyledDescription, StyledImage } from "../style";
 
 import styled from "styled-components";
 
@@ -24,43 +19,43 @@ const ServicesSection = () => {
           High <span>Quality</span> services
         </h2>
 
-        <div className="cards">
-          <div className="card">
+        <StyledCards>
+          <Card>
             <div className="icon">
               <img src={clock} alt="" />
               <h3>Effecient</h3>
             </div>
 
             <p>Lorem ipsum dolor sit amet. </p>
-          </div>
+          </Card>
 
-          <div className="card">
+          <Card>
             <div className="icon">
               <img src={teamwork} alt="" />
               <h3>Teamwork</h3>
             </div>
 
             <p>Lorem ipsum dolor sit amet. </p>
-          </div>
+          </Card>
 
-          <div className="card">
+          <Card>
             <div className="icon">
               <img src={diaphragm} alt="" />
               <h3>Diaphragm</h3>
             </div>
 
             <p>Lorem ipsum dolor sit amet. </p>
-          </div>
+          </Card>
 
-          <div className="card">
+          <Card>
             <div className="icon">
               <img src={money} alt="" />
               <h3>Affordable</h3>
             </div>
 
             <p>Lorem ipsum dolor sit amet. </p>
-          </div>
-        </div>
+          </Card>
+        </StyledCards>
       </StyledDescription>
 
       <StyledImage>
@@ -82,6 +77,21 @@ const Services = styled(StyledAbout)`
 
 const StyledCards = styled.div`
   display: flex;
+  flex-wrap: wrap;
+`;
+
+const Card = styled.div`
+  flex-basis: 15rem;
+  .icon {
+    display: flex;
+    align-items: center;
+    h3 {
+      margin-left: 1rem;
+      background: white;
+      color: #000;
+      padding: 1rem;
+    }
+  }
 `;
 
 export default ServicesSection;

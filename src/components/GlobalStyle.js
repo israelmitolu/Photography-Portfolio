@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         }
         body{
             background: #1b1b1b;
+            font-family: 'Padauk', sans-serif;;
         }
         button{
             font-weight: bold;
@@ -22,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
             &:hover{
                 background: #23d997;
                 color: white;
-            }
+            } font-family: 'Padauk', sans-serif;
         }
         h2{
             font-weight: lighter;
@@ -33,7 +34,8 @@ const GlobalStyle = createGlobalStyle`
         }
         h4{
             font-weight: bold;
-            color: #23d997;
+            color: #1eb880;
+            font-size: 1.5rem;
         }
         p{
             padding: 2rem 0rem;
